@@ -30,9 +30,16 @@ border-radius: 4px;
 <form name="cityselect" >
 
 <p style="color:#f28e0c;">	<img id="di" src="https://spiritofsilu.files.wordpress.com/2017/10/image.jpg?w=1200&h=800" style="border-radius: 200px;" alt="Smiley face" width="100" height="90"> LEARN       PYTHON      THE      HARD WAY</p>
-<p style="background-color:#f28e0c" style="color:#f28e0c;"  align="center" style="font: 16pt courier" >Date : 
-<script> document.write(new Date().toLocaleDateString()); </script>
-</p>
+<p id="demo"  style="background-color:#f28e0c" style="color:#f28e0c;"  align="center" style="font: 16pt courier" ></p>
+
+<script>
+var d = new Date();
+var days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+var month = ["Jan","Feb","Mar","Apr","May", "June", "July" ,"Aug", "Sept", "Oct" ,"Nov" ,"Dev"];
+text = "Date : " + days[d.getDay()] + " " + d.getDate() + " " + month[d.getMonth()] ;
+document.getElementById("demo").innerHTML = text ;
+
+</script>
     <select name="menu" onChange="window.document.location.href=this.options[this.selectedIndex].value;" value="GO">
         <option selected="selected" > BSNL </option>
         >Leeds</option>
